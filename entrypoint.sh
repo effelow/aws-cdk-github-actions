@@ -54,7 +54,7 @@ function runCdk(){
 	fi
 
 	if [ "$GITHUB_EVENT_NAME" == "pull_request" ] && [ "${INPUT_ACTIONS_COMMENT}" == "true" ]; then
-		commentWrapper="#### \`cdk ${INPUT_CDK_SUBCOMMAND} --app 'node ./index.js'\` ${commentStatus}
+		commentWrapper="#### \`cdk ${INPUT_CDK_SUBCOMMAND}'\` ${commentStatus}
 <details><summary>Show Output</summary>
 
 \`\`\`
