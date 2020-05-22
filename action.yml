@@ -8,8 +8,8 @@ inputs:
   cdk_stack:
     description: 'AWS CDK stack name to execute.'
     default: '*'
-  cdk_stack:
-    description: 'AWS CDK stack app to execute.'
+  cdk_app:
+    description: 'AWS CDK app name to execute.'
     default: ''  
   cdk_version:
     description: 'AWS CDK version to install.'
