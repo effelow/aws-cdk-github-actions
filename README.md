@@ -80,6 +80,7 @@ jobs:
 - `cdk_subcommand` **Required** AWS CDK subcommand to execute.
 - `cdk_version` AWS CDK version to install. (default: 'latest')
 - `cdk_stack` AWS CDK stack name to execute. (default: '*')
+- `cdk_app` AWS CDK app name to execute. (default: '')
 - `working_dir` AWS CDK working directory. (default: '.')
 - `actions_comment` Whether or not to comment on pull requests. (default: true)
 
