@@ -42,7 +42,7 @@ function installPipRequirements(){
 }
 
 function runCdk(){
-	echo "Run cdk ${INPUT_CDK_SUBCOMMAND} ${*} \"${INPUT_CDK_STACK}\""
+	echo "Run cdk ${INPUT_CDK_SUBCOMMAND} ${*} \"${INPUT_CDK_STACK}\" --app 'node ./index.js'"
 	output=$(cdk ${INPUT_CDK_SUBCOMMAND} ${*} "${INPUT_CDK_STACK}" 2>&1)
 	exitCode=${?}
 	echo ::set-output name=status_code::${exitCode}
@@ -54,7 +54,7 @@ function runCdk(){
 	fi
 
 	if [ "$GITHUB_EVENT_NAME" == "pull_request" ] && [ "${INPUT_ACTIONS_COMMENT}" == "true" ]; then
-		commentWrapper="#### \`cdk ${INPUT_CDK_SUBCOMMAND}' --app 'node ./index.js'\` ${commentStatus}
+		commentWrapper="#### \`cdk ${INPUT_CDK_SUBCOMMAND}'\` ${commentStatus}
 <details><summary>Show Output</summary>
 
 \`\`\`
